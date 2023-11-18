@@ -1,4 +1,5 @@
-.content-grid {
+.content-grid,
+.full-width {
   display: grid;
   /* Very strange set up */
   /*grid-template-columns: 1fr [content-start] 1fr [content-end] 1fr;*/
@@ -7,7 +8,8 @@
   grid-template-columns: [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
-.content-grid > * {
+.content-grid > *,
+.full-width > * {
   grid-column: content; /* refer to content-start to content-end */
 }
 
