@@ -10,6 +10,10 @@
   grid-column: content; /* refer to content-start to content-end */
 }
 
+.content-grid > .breakout {
+  grid-column: breakout; /* refer to content-start to content-end */
+}
+
 :root {
   --color-scheme: dark;
 
