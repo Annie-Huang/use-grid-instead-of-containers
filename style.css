@@ -8,8 +8,11 @@
   grid-template-columns: [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
-.content-grid > *,
-.full-width > * {
+/*.content-grid > *,*/
+/*.full-width > * {*/
+/* Make the grid-column: content area more specific */
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
   grid-column: content; /* refer to content-start to content-end */
 }
 
@@ -18,7 +21,7 @@
 }
 
 .content-grid > .full-width {
-  grid-column: full-width; /* refer to breakout-start to breakout-end */
+  grid-column: full-width; /* refer to full-width-start to full-widthend */
 }
 
 :root {
